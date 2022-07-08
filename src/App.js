@@ -41,10 +41,10 @@ function App() {
 
   const heightCalculator = height => {
     var heightInches;
-    if (isNaN(parseInt(height)) || typeof parseInt(height) !== 'number') {
+    if (isNaN(parseInt(height))) {
       heightInches = 'N/A';
     } else {
-      heightInches = (parseInt(height) / CM_TO_IN_CONVERSION_RATIO).toFixed(2);
+      heightInches = parseInt(height) / CM_TO_IN_CONVERSION_RATIO;
       return `${Math.round(heightInches)}"`;
     }
     return heightInches;
